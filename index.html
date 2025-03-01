@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Protected Image</title>
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "mypassword") { // Change this to your own password
+                document.getElementById("image").style.display = "block";
+                document.getElementById("login").style.display = "none";
+            } else {
+                alert("Wrong password! Try again.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="login">
+        <h2>Enter Password to View Image</h2>
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+
+    <div id="image" style="display: none;">
+        <h2>Protected Image</h2>
+        <img src="yourphoto.jpg" alt="Protected Image">
+    </div>
+</body>
+</html>
